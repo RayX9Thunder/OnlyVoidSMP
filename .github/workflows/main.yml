@@ -20,12 +20,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Java 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
           cache: maven
-          cache-dependency-path: OnlyVoidSMPCore/pom.xml
 
       - name: Build plugin
         run: mvn --batch-mode clean package
